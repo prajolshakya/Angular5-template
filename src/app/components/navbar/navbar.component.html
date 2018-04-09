@@ -21,8 +21,23 @@
 <hr> {{ lastname }}
 
 <hr>
-<br>
+<br> if else condition
 <h1 *ngIf="status; else notActiveTemplate">Status is true</h1>
 <ng-template #notActiveTemplate>
     <p>Status is false:: {{status}}</p>
 </ng-template>
+
+<hr>
+<br> For loop
+<ul>
+    <li *ngFor="let post of posts">{{ post.title }}</li>
+
+</ul>
+<hr> Style directives
+<h1 [ngStyle]="{color: status ?'green': 'red'}">{{firstname}}</h1>
+
+<hr>
+<br> class directives
+<h1 [ngClass]="{isActive: status === true}">{{lastname}}</h1>
+
+<button class="btn btn-primary">bootstrap buttons</button>
