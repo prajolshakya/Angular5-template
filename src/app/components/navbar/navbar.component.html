@@ -1,0 +1,17 @@
+<p>
+    Where is my navbar?
+    <a href="../components/menu/menu1/menu1.component.html">hey buggy</a>
+</p>
+
+<br>
+<br>
+<hr>
+
+<label for="status">Active </label>
+<input type="radio" id="status" [checked]="status">
+<br> {{ status }}
+
+<hr>
+<button ng-click="clickButton()" onclick=clickButton()>Click me </button>
+<br><br>
+<button (click)=clickButton()>or click me</button>
