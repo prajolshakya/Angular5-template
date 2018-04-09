@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
 
   status: boolean;
+  firstname='prajol';
   lastname = 'namakusi';
 
   constructor() {
@@ -19,7 +20,7 @@ export class NavbarComponent {
 
   getUserStatus() {
     // make api call for db dall to set the value
-    this.status = true;
+    this.status = false;
   }
 
   clickButton() {

@@ -19,3 +19,10 @@
 
 <input [(ngModel)]="lastname" type="text">
 <hr> {{ lastname }}
+
+<hr>
+<br>
+<h1 *ngIf="status; else notActiveTemplate">Status is true</h1>
+<ng-template #notActiveTemplate>
+    <p>Status is false:: {{status}}</p>
+</ng-template>
