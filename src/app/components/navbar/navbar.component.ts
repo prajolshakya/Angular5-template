@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 
 export class NavbarComponent {
 
-   status: boolean;
-
+  status: boolean;
+  lastname = 'namakusi';
 
   constructor() {
     console.log('navbar constructor started');

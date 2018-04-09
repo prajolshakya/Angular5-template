@@ -12,6 +12,10 @@
 <br> {{ status }}
 
 <hr>
-<button ng-click="clickButton()" onclick=clickButton()>Click me </button>
 <br><br>
 <button (click)=clickButton()>or click me</button>
+
+<hr> Two way binding
+
+<input [(ngModel)]="lastname" type="text">
+<hr> {{ lastname }}
