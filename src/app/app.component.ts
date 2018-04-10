@@ -21,5 +21,6 @@ export class AppComponent {
     this.user.username = theForm.value.username;
     this.user.password = theForm.value.password;
     console.log(this.user.password);
+    // this.http.get(/post',this.user);
   }
 }
