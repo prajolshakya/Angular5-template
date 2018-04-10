@@ -4,15 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { CalcComponent } from './components/calc/calc.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavbarComponent,
-    CalcComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
