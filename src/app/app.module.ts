@@ -1,22 +1,31 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
+import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { CalcComponent } from './components/calc/calc.component';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
 
+
+ const appRoutes: Routes = [
+   {path: '', component: HomeComponent},
+   {path: 'contact', component: ContactComponent}
+ ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    CalcComponent
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

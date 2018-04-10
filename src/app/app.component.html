@@ -1,23 +1,29 @@
-<div class="container">
-    <h1>
-        {{ title }}
-        <br> {{ firstname ? 'Condition true' : 'no name- too bad bro'}}
-        <br> Welcome, {{firstname}} {{ lastname }}
+<!-- Nav Bar-->
+<div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
-    </h1>
-    <form (ngSubmit)="onSubmit(theForm);" #theForm="ngForm">
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input ngModel type="text" name="username" id="username" class="form-control" placeholder="Enter username">
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input ngModel type="password" name="password" id="password" class="form-control" placeholder="Enter password">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit this</button>
-    </form>
+<br><br>
+
+<div class="container">
+    <router-outlet></router-outlet>
     <hr>
     <hr>
-    <app-navbar></app-navbar>
 
 </div>
